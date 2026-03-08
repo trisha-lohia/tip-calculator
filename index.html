@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Tip Calculator</title>
+</head>
+<body>
+    <div id="dark-toggle">
+        <input type="checkbox" name="dark-mode" id="dark-mode">
+        <label for="dark-mode" id="dm-label"></label>
+    </div>
+    <div class="container">
+        <div class="calculator-container">
+            <h1 id="heading">Tip Calculator</h1>
+            <div class="input-container">
+                <div class="inputs" id="price-container">
+                    <label class="labels">Price </label>
+                    <input type="number" class="input-box" id="price-amt-input" placeholder="0.00">
+                </div>
+                <div class="inputs" id="tip-container">
+                    <label class="labels">Tip %  </label> <input type="number" class="input-box" id="tip-amt-input" placeholder="0%">
+                </div>
+                <div class="inputs" id="nop-container">
+                    <p class="labels" id="nop-label">No. of people </p>
+                    <div class="nop-btns-num">
+                        <button class="input-btns" id="minus">-</button> <span id="num-of-people">0</span> <button class="input-btns" id="plus">+</button>
+                    </div> 
+                </div>
+            </div>
+            <button id="calculate-btn">Calculate</button>
+            <div id="outputs">
+                <div class="output-row" id="tp">
+                    <div class="output-labels" id="total-price-label">Total Price</div>
+                    <div class="output-num" id="total-price-num">$0.00</div>
+                </div>
+                <div class="output-row" id="tip-amt">
+                    <div class="output-labels" id="tip-label">Tip</div>
+                    <div class="output-num" id="tip-num">$0.00</div>
+                </div>
+                <div class="output-row" id="ppp">
+                    <div class="output-labels" id="ppp-label">Price Per Person</div>
+                    <div class="output-num" id="ppp-num">$0.00</div>
+                </div>
+                <div class="output-row" id="tpp">
+                    <div class="output-labels" id="tpp-label">Tip Per Person</div>
+                    <div class="output-num" id="tpp-num">$0.00</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

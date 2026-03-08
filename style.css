@@ -1,0 +1,200 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --gray: #EFEFEF;
+    --green: #81b29a;
+    --beige: #f4f1de;
+    --peach: #f2cc8f;
+    --orange: #e07a5f;
+    --navy: #3d405b;
+}
+
+body {
+    background-color: var(--gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: var(--white);
+    height: 78vh;
+    width: 75vh;
+    border-radius: 2vh;
+    box-shadow: 0.25vh 0.25vh 1vh 1vh #00000029;
+}
+h1 {
+    text-align: center;
+    color: var(--black);
+}
+.calculator-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    height: 80vh;
+    padding: 0vh 3vh;
+    font-size: 3vh;
+}
+.input-box {
+    font-size: 2.75vh;
+    background-color: var(--gray);
+    border-radius: 1vh;
+    color: var(--green);
+    border: 0.25vh solid var(--green);
+}
+.input-box:hover{
+    box-shadow: .5vh .5vh 2vh .25vh;
+}
+
+.input-box:focus {
+    outline: 0.1vh solid var(--green);
+    
+}
+
+.inputs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--black);
+}
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+.input-btns {
+    background-color: var(--peach);
+    color: var(--black);
+    border-radius: 1vh;
+    height: fit-content;
+    padding: 0.75vh 5.5vh;
+    border: none;
+}
+
+.input-btns:hover{
+    cursor: pointer;
+    box-shadow: 0.1vh 0.1vh 0.5vh 0.5vh #00000029;
+}
+.input-btns:active {
+    transform: translateY(0.2vh);
+    background-color: #ecb763;
+}
+.nop-btns-num {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 35vh;
+}
+#num-of-people {
+    font-size: 3vh;
+}
+
+#calculate-btn {
+    background-color: var(--orange);
+    color: var(--beige);
+    border-radius: 1vh;
+    padding: 1vh 0vh;
+    font-size: 2.75vh;
+    font-weight: 500;
+    border: var(--beige);
+    margin-bottom: 2.5vh;
+}
+
+#calculate-btn:hover{
+    cursor: pointer;
+    box-shadow: 0.1vh 0.1vh 0.5vh 0.5vh #00000029;
+}
+
+#calculate-btn:active{
+    transform: translateY(0.2vh);
+    background-color: #da6747;
+}
+
+#nop-label {
+    margin-top: 0vh;
+}
+#outputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.output-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 3vh;
+}
+#tpp {
+    margin-bottom: 0vh;
+}
+
+#dark-toggle {
+    position: absolute;
+    top: 1vh;
+    left: 1vh;
+    padding: 0.5vh 5vh 0.5vh 0.5vh;
+    background-color: var(--navy);
+    border-radius: 3vh;
+    box-shadow: inset 0vh 0vh 0.25vh 0.5vh #04040459;
+}
+
+#dark-mode {
+    display: none;
+}
+
+#dm-label {
+    display: inline-block;
+    padding: 1vh;
+    background-color: var(--gray);
+    border-radius: 50%;
+    cursor: pointer;
+    height: 2vh;
+    width: 2vh;
+    display: flex;
+    align-items: center;
+    box-shadow: 0.25vh 0.25vh 0.5vh 0.5vh #04040459;
+    transition: transform 0.5s ease;
+}
+
+#dark-mode:checked + #dm-label {
+    transform: translateX(110%);
+}
+
+#dark-toggle:has(#dark-mode:checked) {
+    background-color: var(--peach);
+}
+
+body:has(#dark-mode:checked){
+    background-color: var(--navy);
+    color: var(--beige);
+}
+
+body:has(#dark-mode:checked) .container{ 
+    background-color: #1f212f;
+    color: var(--white);
+}
+
+body:has(#dark-mode:checked) h1{ 
+    color: var(--white);
+}
+
+body:has(#dark-mode:checked) .labels {
+    color: var(--white);
+}
+
+body:has(#dark-mode:checked) #num-of-people{ 
+    color: var(--white);
+}
+
+body:has(#dark-mode:checked) .input-box{ 
+    background-color: var(--navy);
+}
+
+body:has(#dark-mode:checked) .input-btns:hover{ 
+    box-shadow: 0.1vh 0.1vh 0.5vh 0.5vh #ffffff29;
+}
+
+body:has(#dark-mode:checked) #calculate-btn:hover{ 
+    box-shadow: 0.1vh 0.1vh 0.5vh 0.5vh #ffffff29;
+}
