@@ -1,5 +1,4 @@
 <h1>Tip Calculator</h1>
-<hr>
 <p>This is a tip calculator that: </p>
 <ul>
     <li>Includes input fields for bill, tip percentage as well as number of people. </li>
